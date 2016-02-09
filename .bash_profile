@@ -83,12 +83,10 @@ export PS1
 alias ll='ls -lGhAsgo'
 
 #---------- List (l) ----------#
-# l: display long format information (owner, group, size, time filename, links, etc.) 
-# G: inhibit display of group information
 # A: list all entries, including names beginning with a period (.), he current directory (".") and parent directory ("..") are not listed
-# g: do not list owner
-# o: do not display owner
-alias l='ls -lGAgo'
+# G: inhibit display of group information
+# 1: forces single column output
+alias l='ls -AG1'
 
 #Refresh the profile
 alias hokirefresh='source ~/.bash_profile'
