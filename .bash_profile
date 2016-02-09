@@ -23,4 +23,4 @@ function hokibrowse(){
 }
 
 #Refresh the profile
-alias hokirefresh='source ~/hoki_bash_profile/.bash_profile'
+alias hokirefresh='source ~/hoki-bash-profile/.bash_profile'
