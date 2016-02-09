@@ -72,13 +72,14 @@ export PS1
 #========================================= Alias =========================================#
 
 #---------- List ----------#
+# l: display long format information (owner, group, size, time filename, links, etc.) 
 # G: inhibit display of group information
 # h: print sizes in human readable format (e.g., 1K 234M 2G) 
-# l: display long format information (owner, group, size, time filename, links, etc.) 
 # A: list all entries, including names beginning with a period (.), he current directory (".") and parent directory ("..") are not listed
 # s: indicate file size in blocks 
+# g: do not list owner
 # o: do not display owner
-alias ll='ls -GhlAso'
+alias ll='ls -lGhAsgo'
 
 #Refresh the profile
 alias hokirefresh='source ~/.bash_profile'
