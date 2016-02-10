@@ -60,16 +60,35 @@ function hokibrowse(){
   open -a "Google Chrome" $1
 }
 
+function hokipwd(){
+  shortpwd=${PWD##*/$USER}
+  if [ ! -z $shortpwd ]; then
+    echo '~'$shortpwd':'
+  fi 
+}
 
 #========================================= PS1 =========================================#
 
-PS1="\[$COLOR_WHITE\]\n[\$PWD]"             # pwd
+PS1="\[$COLOR_WHITE\]\n\$(hokipwd)"             # pwd
 PS1+="\[\$(git_color)\]"                    # colors git status
-PS1+="\$(git_branch)"                       # current branch
+PS1+=" \$(git_branch)"                       # current branch
 PS1+="\[$COLOR_BLUE\]\$\[$COLOR_RESET\] "   # '#' for root, else '$'
 export PS1
 
 #========================================= Alias =========================================#
+
+# Blue:                         Directory
+# Green:                        Executable or recognized data file
+# Sky Blue:                     Linked file
+# Yellow with black background: Device
+# Pink:                         Graphic image file
+# Red:                          Archive file
+
+#---------- List (l) ----------#
+# A: list all entries, including names beginning with a period (.), he current directory (".") and parent directory ("..") are not listed
+# G: inhibit display of group information
+# 1: forces single column output
+alias l='ls -AG1'
 
 #---------- List (ll) ----------#
 # l: display long format information (owner, group, size, time filename, links, etc.) 
@@ -81,13 +100,6 @@ export PS1
 # o: do not display owner
 
 alias ll='ls -lGhAsgo'
-
-#---------- List (l) ----------#
-# A: list all entries, including names beginning with a period (.), he current directory (".") and parent directory ("..") are not listed
-# G: inhibit display of group information
-# 1: forces single column output
-alias l='ls -AG1'
-
 #Refresh the profile
 alias hokirefresh='source ~/.bash_profile'
 
