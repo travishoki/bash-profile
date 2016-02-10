@@ -19,9 +19,10 @@ function hokibrowse(){
   open -a "Google Chrome" $1
 }
 
+#Create pwd that does not include the /user/[USERNAME]/
 function hokipwd(){
   shortpwd=${PWD##*/$USER}
-  if [ ! -z $shortpwd ]; then
+  if [ ! -z "$shortpwd" ]; then
     echo '~'$shortpwd':'
   fi 
 }
