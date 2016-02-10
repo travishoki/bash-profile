@@ -23,7 +23,8 @@ alias l='ls -AG1'
 # o: do not display owner
 
 alias ll='ls -lGhAsgo'
-#Refresh the profile
+
+#---------- Refresh Profile ----------#
 alias hokirefresh='source ~/.bash_profile'
 
 
