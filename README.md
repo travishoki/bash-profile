@@ -8,7 +8,7 @@ touch .bash_profile
 source ~/hoki-bash-profile/.bash_profile
 
 ##Clone Repo
-git clone https://github.com/travis-hoki/hoki-bash-profile.git
+git clone https://github.com/travishoki/hoki-bash-profile.git
 
 ##source Files
 source ~/.bash_profile
