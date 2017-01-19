@@ -26,3 +26,49 @@ function hokipwd(){
     echo '~'$shortpwd':'
   fi 
 }
+
+#Open Profile
+function hokiprofile(){
+  echo '-- Hoki Profile --'
+  local TEMPURL='/Users/thoki/hoki-bash-profile'
+
+  echo 'Got to dir'
+  cd $TEMPURL
+  echo 'Open in sublime'
+  subl .
+  echo 'Open in Tower'
+  gittower .
+}
+
+#Open work applications
+function hokiwork(){
+  echo '-- Hoki Work --'
+
+  cd /
+  cd Applications
+
+  TEMPAPPARRAY=("Slack" "Spotify" "Tower" "Google Chrome" "Sublime Text" "iTerm")
+  for i in "${TEMPAPPARRAY[@]}"; do
+    if pgrep -xq -- "${i}"; then
+        echo 'Already Running '"$i"
+    else
+        echo 'Open '"$i"
+        open -a "$i"
+    fi
+  done
+
+  ostkChangNPMRC true
+
+  echo '----------------------'
+
+  echo 'Go to "os" Dir'
+  cd ~/os
+  l
+}
+
+#Switch npm for home projects
+function hokihome(){
+  echo '-- Hoki Home --'
+
+  ostkChangNPMRC false
+}

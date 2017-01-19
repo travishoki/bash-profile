@@ -25,6 +25,4 @@ alias l='ls -AG1'
 alias ll='ls -lGhAsgo'
 
 #---------- Refresh Profile ----------#
-alias hokirefresh='source ~/.bash_profile'
-
-
+alias hokirefresh='source ~/.bash_profile && echo "Bash Profile Refreshed"'
