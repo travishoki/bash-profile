@@ -40,15 +40,15 @@ function hokiprofile(){
   gittower .
 }
 
-#Open work applications
-function hokiwork(){
-  echo '-- Hoki Work --'
+function hokiOpenApps(){
+  echo '-- Hoki Open Apps --'
 
+  echo 'Go to Applications'
   cd /
   cd Applications
 
-  TEMPAPPARRAY=("Slack" "Spotify" "Tower" "Google Chrome" "Sublime Text" "iTerm")
-  for i in "${TEMPAPPARRAY[@]}"; do
+  param1=("${!1}")
+  for i in "${param1[@]}"; do
     if pgrep -xq -- "${i}"; then
         echo 'Already Running '"$i"
     else
@@ -56,6 +56,14 @@ function hokiwork(){
         open -a "$i"
     fi
   done
+}
+
+#Open work applications
+function hokiwork(){
+  echo '-- Hoki Work --'
+
+  TEMPAPPARRAY=("Slack" "Spotify" "Tower" "Google Chrome" "Sublime Text" "iTerm")
+  hokiOpenApps TEMPAPPARRAY[@]
 
   ostkChangNPMRC true
 
