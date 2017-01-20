@@ -13,6 +13,9 @@ alias ostktest='ostkChangeEnv ugc.test'
 alias ostkprod='ostkChangeEnv prod'
 alias ostkdogfood='ostkChangeEnv dogfood.test'
 
+# Print Environment
+#------------------------------------------------------------------------
+alias ostkenvironment='head -n 1 /etc/hosts'
 
 # Open Projects
 #------------------------------------------------------------------------
@@ -31,6 +34,8 @@ alias myreviews='ostkOpenProject ugc/reviews'
 alias productpage='ostkOpenProject product-page/product-page'
 
 
+# Change NPMRC
+#------------------------------------------------------------------------
 function ostkChangNPMRC(){
 	echo 'CHANGE NPM RC'
 
