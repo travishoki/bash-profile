@@ -30,10 +30,10 @@ function hokipwd(){
 #Open Profile
 function hokiprofile(){
   echo '-- Hoki Profile --'
-  local TEMPURL='/Users/thoki/hoki-bash-profile'
 
   echo 'Got to dir'
-  cd $TEMPURL
+  cd
+  cd 'hoki-bash-profile'
   echo 'Open in sublime'
   subl .
   echo 'Open in Tower'
