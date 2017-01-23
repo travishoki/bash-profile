@@ -25,8 +25,8 @@ function ostkOpenProject(){
 	echo 'Go to dir'
 	local TEMPDIR='/Users/thoki/os/'
 	cd $TEMPDIR''$1
-	echo 'Open in sublime'
-	subl .
+	echo 'Open in Atom'
+	atom .
 	echo 'Open in Tower'
 	gittower .
 }

@@ -34,8 +34,8 @@ function hokiprofile(){
   echo 'Got to dir'
   cd
   cd 'hoki-bash-profile'
-  echo 'Open in sublime'
-  subl .
+  echo 'Open in Atom'
+  atom .
   echo 'Open in Tower'
   gittower .
 }
