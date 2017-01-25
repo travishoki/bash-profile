@@ -24,7 +24,7 @@ function hokipwd(){
   shortpwd=${PWD##*/$USER}
   if [ ! -z "$shortpwd" ]; then
     echo '~'$shortpwd':'
-  fi 
+  fi
 }
 
 #Open Profile
@@ -62,7 +62,7 @@ function hokiOpenApps(){
 function hokiwork(){
   echo '-- Hoki Work --'
 
-  TEMPAPPARRAY=("Slack" "Spotify" "Tower" "Google Chrome" "Sublime Text" "iTerm")
+  TEMPAPPARRAY=("Slack" "Spotify" "Tower" "Google Chrome" "Atom" "iTerm")
   hokiOpenApps TEMPAPPARRAY[@]
 
   ostkChangNPMRC true
