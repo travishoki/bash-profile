@@ -16,7 +16,9 @@ alias ostkdogfood='ostkChangeEnv dogfood.test'
 
 # Print Environment
 #------------------------------------------------------------------------
-alias ostkenvironment='head -n 1 /etc/hosts'
+function ostkenvironment(){
+	cat /etc/hosts | ggrep -Po '(?<=env:).+'
+}
 
 # Open Projects
 #------------------------------------------------------------------------

@@ -58,12 +58,30 @@ function hokiOpenApps(){
   done
 }
 
+function hokiCloseApps(){
+  echo '-- Hoki Close Apps --'
+  param1=("${!1}")
+  for i in "${param1[@]}"; do
+    if pgrep -xq -- "${i}"; then
+      echo 'Close '"$i"
+      osascript -e 'quit app "'$i'"'
+    else
+      echo 'Already Closed '"$i"
+    fi
+  done
+}
+
 #Open work applications
 function hokiwork(){
   echo '-- Hoki Work --'
 
-  TEMPAPPARRAY=("Slack" "Spotify" "Tower" "Google Chrome" "Atom" "iTerm")
-  hokiOpenApps TEMPAPPARRAY[@]
+  #Open Applications
+  TEMPAPPARRAY1=("Slack" "Spotify" "Tower" "Google Chrome" "Atom" "iTerm")
+  hokiOpenApps TEMPAPPARRAY1[@]
+
+  #Close Applications
+  TEMPAPPARRAY2=("Spotify" "Junos Pulse" "Adobe Photoshop CC 2017")
+  hokiCloseApps TEMPAPPARRAY2[@]
 
   ostkChangNPMRC true
 
