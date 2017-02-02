@@ -17,7 +17,10 @@ alias ostkdogfood='ostkChangeEnv dogfood.test'
 # Print Environment
 #------------------------------------------------------------------------
 function ostkenvironment(){
-	cat /etc/hosts | ggrep -Po '(?<=env:).+'
+	local hostEnv=`cat /etc/hosts | ggrep -Po '(?<=env:).+'`
+	if [[ ${#hostEnv} > 0 ]];then
+			echo '('$hostEnv')'
+	fi
 }
 
 # Open Projects
