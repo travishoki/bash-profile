@@ -11,12 +11,11 @@ function tlpweb(){
   for i in "${TEMPAPPARRAY[@]}"; do
   	echo "Open "$i
 	open -a "Google Chrome" "$i"
-  done	
+  done
 }
 
 #Open Applications
 function tlpapps(){
   TEMPAPPARRAY=("Google Chrome" "Adobe Lightroom" "iTerm")
-  hokiOpenApps TEMPAPPARRAY[@]
+  _hokiOpenApps TEMPAPPARRAY[@]
 }
-

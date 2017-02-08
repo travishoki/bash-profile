@@ -45,7 +45,7 @@ function hokiprofile(){
   gittower .
 }
 
-function hokiOpenApps(){
+function _hokiOpenApps(){
   echo '-- Hoki Open Apps --'
 
   echo 'Go to Applications'
@@ -63,7 +63,7 @@ function hokiOpenApps(){
   done
 }
 
-function hokiCloseApps(){
+function _hokiCloseApps(){
   echo '-- Hoki Close Apps --'
   param1=("${!1}")
   for i in "${param1[@]}"; do
@@ -82,11 +82,11 @@ function hokiwork(){
 
   #Open Applications
   TEMPAPPARRAY1=("Slack" "Spotify" "Tower" "Google Chrome" "Atom" "iTerm")
-  hokiOpenApps TEMPAPPARRAY1[@]
+  _hokiOpenApps TEMPAPPARRAY1[@]
 
   #Close Applications
   TEMPAPPARRAY2=("Spotify" "Junos Pulse" "Adobe Photoshop CC 2017")
-  hokiCloseApps TEMPAPPARRAY2[@]
+  _hokiCloseApps TEMPAPPARRAY2[@]
 
   ostkChangNPMRC true
 
