@@ -28,7 +28,7 @@ function hokipwd(){
   shortpwd=${shortpwd/$unwanted/$replacement}
 
   if [ ! -z "$shortpwd" ]; then
-    echo '~'$shortpwd':'
+      echo '~'$shortpwd': '
   fi
 }
 
