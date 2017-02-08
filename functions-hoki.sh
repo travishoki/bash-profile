@@ -92,6 +92,25 @@ function hokiwork(){
   l
 }
 
+function game(){
+  echo '-- Game --';
+
+  echo 'Go to game icon'
+  cd ~/Sites/games/icon-match
+
+  echo 'Open in Atom'
+	atom phaser
+
+	echo 'Open in Tower'
+	gittower .
+
+  echo 'Open dir'
+  open .
+
+  echo 'Grunt'
+  grunt bw
+}
+
 #Switch npm for home projects
 function hokihome(){
   echo '-- Hoki Home --'
