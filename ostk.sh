@@ -37,7 +37,7 @@ function ostkOpenProject(){
 }
 alias sarp='ostkOpenProject ugc/sarp'
 alias myreviews='ostkOpenProject ugc/reviews'
-alias productpage='ostkOpenProject product-page/product-page'
+alias productpage='ostkOpenProject product-page'
 
 
 # Change NPMRC
