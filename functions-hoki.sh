@@ -85,7 +85,7 @@ function hokiwork(){
   _hokiOpenApps TEMPAPPARRAY1[@]
 
   #Close Applications
-  TEMPAPPARRAY2=("Spotify" "Junos Pulse" "Adobe Photoshop CC 2017")
+  TEMPAPPARRAY2=("Junos Pulse" "Adobe Photoshop CC 2017")
   _hokiCloseApps TEMPAPPARRAY2[@]
 
   ostkChangNPMRC true
