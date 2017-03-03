@@ -9,10 +9,11 @@ function ostkChangeEnv(){
 	echo 'DNS Flushed'
 	hokirefresh
 }
-alias ostkdev='ostkChangeEnv ugc.dev'
-alias ostktest='ostkChangeEnv ugc.test'
+alias ostkdev='ostkChangeEnv latte.dev'
+alias ostktest='ostkChangeEnv latte.test'
+alias ostkugcdev='ostkChangeEnv ugc.dev'
+alias ostkugctest='ostkChangeEnv ugc.test'
 alias ostkprod='ostkChangeEnv prod'
-alias ostkdogfood='ostkChangeEnv dogfood.test'
 
 # Print Environment
 #------------------------------------------------------------------------
