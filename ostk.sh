@@ -36,19 +36,21 @@ function ostkenvironment(){
 
 # Open Projects
 #------------------------------------------------------------------------
-function ostkOpenProject(){
+function openProject(){
 	echo '-- Open '$1' --'
 	echo 'Go to dir'
-	local TEMPDIR='/Users/thoki/os/'
+	local TEMPDIR='/Users/thoki/'
 	cd $TEMPDIR''$1
 	hokicode
 }
-alias sarp='ostkOpenProject ugc/sarp'
-alias myreviews='ostkOpenProject ugc/reviews'
-alias productpage='ostkOpenProject product-page'
-alias staticPage='ostkOpenProject static-responsive-base'
+alias sarp='openProject os/ugc/sarp'
+alias myreviews='openProject os/ugc/reviews'
+alias productpage='openProject os/product-page'
+alias staticPage='openProject os/static-responsive-base'
 
-
+alias hokiporfolio='openProject Sites/travishoki'
+alias hokiheroku='openProject Sites/Heroku'
+alias hokips='openProject Sites/plural-sight/react-and-redux/app'
 
 
 # Change NPMRC
