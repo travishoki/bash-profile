@@ -15,6 +15,16 @@ alias ostkugcdev='ostkChangeEnv ugc.dev'
 alias ostkugctest='ostkChangeEnv ugc.test'
 alias ostkprod='ostkChangeEnv prod'
 
+function hokicode(){
+	echo '-- Open Git --'
+	if [ -d ".git" ];then
+		echo 'Open in Atom'
+		atom .
+		echo 'Open in Tower'
+		gittower .
+	fi
+}
+
 # Print Environment
 #------------------------------------------------------------------------
 function ostkenvironment(){
@@ -31,14 +41,14 @@ function ostkOpenProject(){
 	echo 'Go to dir'
 	local TEMPDIR='/Users/thoki/os/'
 	cd $TEMPDIR''$1
-	echo 'Open in Atom'
-	atom .
-	echo 'Open in Tower'
-	gittower .
+	hokicode
 }
 alias sarp='ostkOpenProject ugc/sarp'
 alias myreviews='ostkOpenProject ugc/reviews'
 alias productpage='ostkOpenProject product-page'
+alias staticPage='ostkOpenProject static-responsive-base'
+
+
 
 
 # Change NPMRC
