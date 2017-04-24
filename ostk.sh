@@ -1,5 +1,13 @@
 # Changing Environments
 #------------------------------------------------------------------------
+export JAVA_HOME=$(/usr/libexec/java_home)
+export DESKTOP_DB_HOSTNAME=seo.desktopdb.dev.ostk.com
+export DESKTOP_DB_DATABASE_NAME=thoki
+export DESKTOP_DB_DATABASE_NAME_SHP=thoki
+export DESKTOP_DB_ENABLED=true
+
+# Changing Environments
+#------------------------------------------------------------------------
 function ostkChangeEnv(){
 	sudo cp ~/ostkCustom/hosts/$1 /etc/hosts
 	echo '-- OSTK - Environment Changed to '\"$1\"' --'
@@ -48,9 +56,20 @@ alias myreviews='openProject os/ugc/reviews'
 alias productpage='openProject os/product-page'
 alias staticPage='openProject os/static-responsive-base'
 
-alias hokiporfolio='openProject Sites/travishoki'
 alias hokiheroku='openProject Sites/Heroku'
-alias hokips='openProject Sites/plural-sight/react-and-redux/app'
+
+function hokiporfolio(){
+	openProject 'Sites/travishoki/travishoki-react'
+	npm run start -s
+}
+
+function hokips(){
+	echo '-- Open Pluralsight Tutorial --'
+	local TEMPDIR='/Users/thoki/Sites/plural-sight/react-and-redux/app'
+	cd $TEMPDIR
+	atom .
+	open ../videos/
+}
 
 
 # Change NPMRC
