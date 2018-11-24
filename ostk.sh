@@ -2,8 +2,8 @@
 #------------------------------------------------------------------------
 export JAVA_HOME=$(/usr/libexec/java_home)
 export DESKTOP_DB_HOSTNAME=seo.desktopdb.dev.ostk.com
-export DESKTOP_DB_DATABASE_NAME=thoki
-export DESKTOP_DB_DATABASE_NAME_SHP=thoki
+export DESKTOP_DB_DATABASE_NAME=jtew
+export DESKTOP_DB_DATABASE_NAME_SHP=jtew
 export DESKTOP_DB_ENABLED=true
 
 # Changing Environments
@@ -17,10 +17,9 @@ function ostkChangeEnv(){
 	echo 'DNS Flushed'
 	hokirefresh
 }
-alias ostkdev='ostkChangeEnv latte.dev'
-alias ostktest='ostkChangeEnv latte.test'
 alias ostkugcdev='ostkChangeEnv ugc.dev'
 alias ostkugctest='ostkChangeEnv ugc.test'
+alias ostkintegration='ostkChangeEnv integration.test'
 alias ostkprod='ostkChangeEnv prod'
 
 function hokicode(){
@@ -58,7 +57,7 @@ alias staticPage='openProject os/static-responsive-base'
 
 alias hokiheroku='openProject Sites/Heroku'
 
-function hokiporfolio(){
+function hokiportfolio(){
 	openProject 'Sites/travishoki/travishoki-react'
 	npm run start -s
 }
@@ -70,7 +69,6 @@ function hokips(){
 	atom .
 	open ../videos/
 }
-
 
 # Change NPMRC
 #------------------------------------------------------------------------
@@ -86,34 +84,6 @@ function ostkChangNPMRC(){
 	fi
 }
 
-
-# Get Current Product Page Versions
+# Update Integration's Host File
 #------------------------------------------------------------------------
-alias current="curr"
-
-curr() {
-    # For this to work, it is necessary to set Gas Mask preference "override external modifications" to "unchecked". This can be found under the "General" tab, in Gas Mask preferences.
-    orig=`cat /etc/hosts`
-    echo "##
-# Host Database
-#
-# localhost is used to configure the loopback interface
-# when the system is booting.  Do not change this entry.
-##
-127.0.0.1    localhost
-255.255.255.255    broadcasthost
-::1             localhost
-" > /etc/hosts
-    if [[ $1 = 'js' ]]; then
-        curl https://www.overstock.com/Home-Garden/Stainless-Steel-Stock-Pots-Set-of-4/1/product.html | grep --color=always -o -n product-page.*.js | awk '{print "\n",$0,"\n"}'
-    elif [[ $1 = 'css' ]]; then
-        curl https://www.overstock.com/Home-Garden/Stainless-Steel-Stock-Pots-Set-of-4/1/product.html | grep --color=always -o -n product-page.*.css | awk '{print "\n",$0,"\n"}'
-    else
-        curl https://www.overstock.com/Home-Garden/Stainless-Steel-Stock-Pots-Set-of-4/1/product.html | grep --color=always -o -n "\(product-page.*.js\|product-page.*.css\)" | awk '{print "\n",$0}'
-        echo "
-"
-    fi
-    echo "$orig" > /etc/hosts
-}
-export NVM_DIR="/Users/thoki/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+alias host_update='sudo sed -i "" "/shopping/s/[0-9][0-9]*.[0-9][0-9]*.[0-9][0-9]*.[0-9][0-9]*/$(host shopping-integration.test.overstock.com  | grep -Eo "[0-9]+.[0-9]+.[0-9]+.[0-9]+")/g" ~/Library/Gas\ Mask/Local/integration.test.hst;sudo sed -i "" "/akamai/s/[0-9][0-9]*.[0-9][0-9]*.[0-9][0-9]*.[0-9][0-9]*/$(host www-proxy-integration.test.overstock.com  | grep -Eo "[0-9]+.[0-9]+.[0-9]+.[0-9]+")/g" ~/Library/Gas\ Mask/Local/Integration.test.hst'

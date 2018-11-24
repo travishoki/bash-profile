@@ -45,6 +45,14 @@ function hokiprofile(){
   gittower .
 }
 
+function skatehokigame(){
+    cd ~/Documents/skate-hoki/skate-hoki-corona
+    echo 'Open in Atom'
+    atom .
+    echo 'Open in Tower'
+    gittower .
+}
+
 function _hokiOpenApps(){
   echo '-- Hoki Open Apps --'
 
@@ -88,13 +96,26 @@ function hokiwork(){
   TEMPAPPARRAY2=("Junos Pulse" "Adobe Photoshop CC 2017")
   _hokiCloseApps TEMPAPPARRAY2[@]
 
-  ostkChangNPMRC true
-
   echo '----------------------'
 
   echo 'Go to "os" Dir'
   cd ~/os
   l
+}
+
+#Switch npm for home projects
+function hokihome(){
+  echo '-- Hoki Home --'
+
+  ostkChangNPMRC false
+}
+
+
+#Switch npm for home projects
+function hokiostk(){
+  echo '-- Hoki Overstock --'
+
+  ostkChangNPMRC true
 }
 
 function game(){
@@ -116,9 +137,5 @@ function game(){
   grunt bw
 }
 
-#Switch npm for home projects
-function hokihome(){
-  echo '-- Hoki Home --'
-
-  ostkChangNPMRC false
-}
+export NVM_DIR="/Users/thoki/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
