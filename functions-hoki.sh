@@ -93,7 +93,7 @@ function hokiwork(){
   _hokiOpenApps TEMPAPPARRAY1[@]
 
   #Close Applications
-  TEMPAPPARRAY2=("Junos Pulse" "Adobe Photoshop CC 2017")
+  TEMPAPPARRAY2=()
   _hokiCloseApps TEMPAPPARRAY2[@]
 
   echo '----------------------'
@@ -102,40 +102,3 @@ function hokiwork(){
   cd ~/os
   l
 }
-
-#Switch npm for home projects
-function hokihome(){
-  echo '-- Hoki Home --'
-
-  ostkChangNPMRC false
-}
-
-
-#Switch npm for home projects
-function hokiostk(){
-  echo '-- Hoki Overstock --'
-
-  ostkChangNPMRC true
-}
-
-function game(){
-  echo '-- Game --';
-
-  echo 'Go to game icon'
-  cd ~/Sites/games/icon-match
-
-  echo 'Open in Atom'
-	atom phaser
-
-	echo 'Open in Tower'
-	gittower .
-
-  echo 'Open dir'
-  open .
-
-  echo 'Grunt'
-  grunt bw
-}
-
-export NVM_DIR="/Users/thoki/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
