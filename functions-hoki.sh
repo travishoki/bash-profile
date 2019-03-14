@@ -23,8 +23,8 @@ function hokibrowse(){
 function hokipwd(){
   shortpwd=${PWD##*/$USER}
 
-  replacement="os"
-  unwanted="Documents/overstock/repos"
+  replacement="Chatbooks"
+  unwanted="cb/web-infinite"
   shortpwd=${shortpwd/$unwanted/$replacement}
 
   if [ ! -z "$shortpwd" ]; then
@@ -98,7 +98,7 @@ function hokiwork(){
 
   echo '----------------------'
 
-  echo 'Go to "os" Dir'
-  cd ~/os
+  echo 'Go to "Chatbooks" Dir'
+  cd ~/cb/web-infinite/
   l
 }
