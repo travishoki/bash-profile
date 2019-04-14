@@ -23,8 +23,8 @@ function hokibrowse(){
 function hokipwd(){
   shortpwd=${PWD##*/$USER}
 
-  replacement="Chatbooks"
-  unwanted="cb/web-infinite"
+  replacement="os"
+  unwanted="Documents/overstock/repos"
   shortpwd=${shortpwd/$unwanted/$replacement}
 
   if [ ! -z "$shortpwd" ]; then
@@ -93,12 +93,50 @@ function hokiwork(){
   _hokiOpenApps TEMPAPPARRAY1[@]
 
   #Close Applications
-  TEMPAPPARRAY2=()
+  TEMPAPPARRAY2=("Junos Pulse" "Adobe Photoshop CC 2017")
   _hokiCloseApps TEMPAPPARRAY2[@]
 
   echo '----------------------'
 
-  echo 'Go to "Chatbooks" Dir'
-  cd ~/cb/web-infinite/
+  echo 'Go to "os" Dir'
+  cd ~/os
   l
 }
+
+#Switch npm for home projects
+function hokihome(){
+  echo '-- Hoki Home --'
+
+  ostkChangNPMRC false
+}
+
+
+#Switch npm for home projects
+function hokiostk(){
+  echo '-- Hoki Overstock --'
+
+  ostkChangNPMRC true
+}
+
+function game(){
+  echo '-- Game --';
+
+  echo 'Go to game icon'
+  cd ~/Sites/games/icon-match
+
+  echo 'Open in Atom'
+	atom phaser
+
+	echo 'Open in Tower'
+	gittower .
+
+  echo 'Open dir'
+  open .
+
+  echo 'Grunt'
+  grunt bw
+}
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
