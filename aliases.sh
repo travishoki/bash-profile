@@ -14,11 +14,11 @@
 alias l='ls -AG1'
 
 #---------- List (ll) ----------#
-# l: display long format information (owner, group, size, time filename, links, etc.) 
+# l: display long format information (owner, group, size, time filename, links, etc.)
 # G: inhibit display of group information
-# h: print sizes in human readable format (e.g., 1K 234M 2G) 
+# h: print sizes in human readable format (e.g., 1K 234M 2G)
 # A: list all entries, including names beginning with a period (.), he current directory (".") and parent directory ("..") are not listed
-# s: indicate file size in blocks 
+# s: indicate file size in blocks
 # g: do not list owner
 # o: do not display owner
 

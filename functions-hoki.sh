@@ -37,8 +37,8 @@ function hokiprofile(){
   echo '-- Hoki Profile --'
 
   echo 'Got to dir'
-  cd
-  cd 'hoki-bash-profile'
+  cd ~/hoki-bash-profile
+  hokititle "Bash Profile"
   echo 'Open in Atom'
   atom .
   echo 'Open in Tower'
@@ -84,6 +84,11 @@ function _hokiCloseApps(){
   done
 }
 
+#Atom title
+function hokititle() {
+  echo -n -e "\033]0;$1\007"
+}
+
 #Open work applications
 function hokiwork(){
   echo '-- Hoki Work --'
@@ -96,11 +101,15 @@ function hokiwork(){
   TEMPAPPARRAY2=("Junos Pulse" "Adobe Photoshop CC 2017")
   _hokiCloseApps TEMPAPPARRAY2[@]
 
+  hokititle "Chatbooks"
+
   echo '----------------------'
 
-  echo 'Go to "os" Dir'
-  cd ~/os
-  l
+  echo 'Go to "Chatbooks"'
+  cd ~/cb/web-infinite/
+
+  echo 'Open in Tower'
+  atom .
 }
 
 #Switch npm for home projects
@@ -125,10 +134,10 @@ function game(){
   cd ~/Sites/games/icon-match
 
   echo 'Open in Atom'
-	atom phaser
+  atom phaser
 
-	echo 'Open in Tower'
-	gittower .
+  echo 'Open in Tower'
+  gittower .
 
   echo 'Open dir'
   open .
