@@ -45,14 +45,6 @@ function hokiprofile(){
   gittower .
 }
 
-function skatehokigame(){
-    cd ~/Documents/skate-hoki/skate-hoki-corona
-    echo 'Open in Atom'
-    atom .
-    echo 'Open in Tower'
-    gittower .
-}
-
 function _hokiOpenApps(){
   echo '-- Hoki Open Apps --'
 
@@ -87,51 +79,6 @@ function _hokiCloseApps(){
 #Atom title
 function hokititle() {
   echo -n -e "\033]0;$1\007"
-}
-
-#Open work applications
-function hokiwork(){
-  echo '-- Hoki Work --'
-
-  #Open Applications
-  TEMPAPPARRAY1=("Slack" "Spotify" "Google Chrome" "iTerm")
-  _hokiOpenApps TEMPAPPARRAY1[@]
-
-  #Close Applications
-  # TEMPAPPARRAY2=()
-  # _hokiCloseApps TEMPAPPARRAY2[@]
-
-  hokititle "Chatbooks"
-
-  echo '----------------------'
-
-  # Go to Chatbooks
-  cd ~/Sites/web-infinite/
-
-  # Open Tower
-  gittower .
-
-  # Open Atom
-  atom .
-}
-
-function game(){
-  echo '-- Game --';
-
-  echo 'Go to game icon'
-  cd ~/Sites/games/icon-match
-
-  echo 'Open in Atom'
-  atom phaser
-
-  echo 'Open in Tower'
-  gittower .
-
-  echo 'Open dir'
-  open .
-
-  echo 'Grunt'
-  grunt bw
 }
 
 export NVM_DIR="$HOME/.nvm"
