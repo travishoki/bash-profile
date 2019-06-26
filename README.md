@@ -1,14 +1,21 @@
 # Hoki Bash Profile
-
-## Make Path to Bash Profile
-cd ~/
-touch .bash_profile
-
-## Add this line to the new bash_profile
-source ~/hoki-bash-profile/.bash_profile
-
-## Clone Repo
+---
+# Setup
+### Clone Repo
 git clone https://github.com/travishoki/hoki-bash-profile.git
 
-## source Files
-source ~/.bash_profile
+### Make Path to Bash Profile
+`cd ~/`
+`touch .bash_profile`
+
+### Add this line to the new bash_profile
+```source ~/hoki-bash-profile/.bash_profile```
+
+### source Files
+`source ~/.bash_profile`
+
+---
+# Commands
+
+### Launch Work Programs
+`hoki work`
