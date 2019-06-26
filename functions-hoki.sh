@@ -94,21 +94,24 @@ function hokiwork(){
   echo '-- Hoki Work --'
 
   #Open Applications
-  TEMPAPPARRAY1=("Slack" "Spotify" "Tower" "Google Chrome" "Atom" "iTerm")
+  TEMPAPPARRAY1=("Slack" "Spotify" "Google Chrome" "iTerm")
   _hokiOpenApps TEMPAPPARRAY1[@]
 
   #Close Applications
-  TEMPAPPARRAY2=("Junos Pulse" "Adobe Photoshop CC 2017")
-  _hokiCloseApps TEMPAPPARRAY2[@]
+  # TEMPAPPARRAY2=()
+  # _hokiCloseApps TEMPAPPARRAY2[@]
 
   hokititle "Chatbooks"
 
   echo '----------------------'
 
-  echo 'Go to "Chatbooks"'
+  # Go to Chatbooks
   cd ~/cb/web-infinite/
 
-  echo 'Open in Tower'
+  # Open Tower
+  gittower .
+
+  # Open Atom
   atom .
 }
 
