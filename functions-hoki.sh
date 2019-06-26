@@ -106,28 +106,13 @@ function hokiwork(){
   echo '----------------------'
 
   # Go to Chatbooks
-  cd ~/cb/web-infinite/
+  cd ~/Sites/web-infinite/
 
   # Open Tower
   gittower .
 
   # Open Atom
   atom .
-}
-
-#Switch npm for home projects
-function hokihome(){
-  echo '-- Hoki Home --'
-
-  ostkChangNPMRC false
-}
-
-
-#Switch npm for home projects
-function hokiostk(){
-  echo '-- Hoki Overstock --'
-
-  ostkChangNPMRC true
 }
 
 function game(){
