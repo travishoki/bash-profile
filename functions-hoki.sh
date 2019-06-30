@@ -23,8 +23,8 @@ function hokibrowse(){
 function hokipwd(){
   shortpwd=${PWD##*/$USER}
 
-  replacement="os"
-  unwanted="Documents/overstock/repos"
+  replacement="Chatbooks"
+  unwanted="/Sites/web-infinite"
   shortpwd=${shortpwd/$unwanted/$replacement}
 
   if [ ! -z "$shortpwd" ]; then
