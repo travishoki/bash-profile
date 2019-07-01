@@ -1,9 +1,9 @@
-#Open work applications
-function hokiwork(){
-  echo '-- Hoki Work --'
+#Open Hoki Skateboards applications
+function hokiskateboards(){
+  echo '-- Hoki Skateboards --'
 
   #Open Applications
-  TEMPAPPARRAY1=("Slack" "Spotify" "Google Chrome")
+  TEMPAPPARRAY1=("Google Chrome")
   _hokiOpenApps TEMPAPPARRAY1[@]
 
   #Close Applications
@@ -15,7 +15,7 @@ function hokiwork(){
   echo '----------------------'
 
   # Go to Chatbooks
-  cd ~/Sites/web-infinite/
+  cd ~/Sites/wp/themes/hokiskateboards-wp
 
   # Open Tower
   gittower .
