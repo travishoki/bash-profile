@@ -24,4 +24,9 @@ function hokiwork(){
   code .
 }
 
-alias cbstart='yarn clear:env && sudo yarn start'
+alias tDevApi='title "ch-devapi"'
+alias tStart='title "ch-atbooks"'
+alias tStyleGuide='title "ch-style"'
+
+alias chat='tStart && yarn clear:env && sudo yarn start'
+alias chdevapi='tDevApi && cdweb && sudo yarn start:dev-api'
