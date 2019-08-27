@@ -20,6 +20,8 @@ function hokiwork(){
   # Open Tower
   gittower .
 
-  # Open Atom
-  atom .
+  # Open Visual Studio Code
+  code .
 }
+
+alias cbstart='yarn clear:env && sudo yarn start'

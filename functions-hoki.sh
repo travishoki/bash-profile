@@ -39,8 +39,8 @@ function hokiprofile(){
   echo 'Got to dir'
   cd ~/hoki-bash-profile
   hokititle "Bash Profile"
-  echo 'Open in Atom'
-  atom .
+  echo 'Open in Code'
+  code .
   echo 'Open in Tower'
   gittower .
 }
