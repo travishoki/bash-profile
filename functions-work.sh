@@ -24,9 +24,16 @@ function hokiwork(){
   code .
 }
 
+function title {
+    echo -ne "\033]0;"$*"\007"
+}
+
+# Titles
 alias tDevApi='title "ch-devapi"'
 alias tStart='title "ch-atbooks"'
 alias tStyleGuide='title "ch-style"'
 
+# Commands
 alias chat='tStart && yarn clear:env && sudo yarn start'
-alias chdevapi='tDevApi && cdweb && sudo yarn start:dev-api'
+alias chdevapi='tDevApi && sudo yarn start:dev-api'
+alias chstyle='tStyleGuide && cd chatponents && sudo yarn start'
