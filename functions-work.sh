@@ -21,7 +21,7 @@ function hokiwork(){
   gittower .
 
   # Open Visual Studio Code
-  code .
+  atom .
 }
 
 function title {
