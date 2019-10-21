@@ -1,25 +1,25 @@
 #Open Hoki Skateboards applications
 function hokiskateboards(){
-  echo '-- Hoki Skateboards --'
+	echo '-- Hoki Skateboards --'
 
-  #Open Applications
-  TEMPAPPARRAY1=("Google Chrome")
-  _hokiOpenApps TEMPAPPARRAY1[@]
+	#Open Applications
+	TEMPAPPARRAY1=("Google Chrome")
+	_hokiOpenApps TEMPAPPARRAY1[@]
 
-  #Close Applications
-  # TEMPAPPARRAY2=()
-  # _hokiCloseApps TEMPAPPARRAY2[@]
+	#Close Applications
+	# TEMPAPPARRAY2=()
+	# _hokiCloseApps TEMPAPPARRAY2[@]
 
-  hokititle "Chatbooks"
+	hokititle "Chatbooks"
 
-  echo '----------------------'
+	echo '----------------------'
 
-  # Go to Chatbooks
-  cd ~/Sites/wp/themes/hokiskateboards-wp
+	# Go to Chatbooks
+	cd ~/Sites/wp/themes/hokiskateboards-wp
 
-  # Open Tower
-  gittower .
+	# Open Tower
+	gittower .
 
-  # Open Atom
-  atom .
+	# Open Atom
+	atom .
 }

@@ -9,6 +9,11 @@ source ~/hoki-bash-profile/functions-work.sh
 source ~/hoki-bash-profile/tlp.sh
 source ~/hoki-bash-profile/profile-ps1.sh
 
+# Brew
+export PATH="/usr/local/sbin:$PATH"
+
+# NVM
+# Installed with Git
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
