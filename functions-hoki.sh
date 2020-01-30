@@ -103,7 +103,7 @@ function hokigame() {
 
 	nvm use 10
 
-	yarn start
+	yarn web
 }
 
 export NVM_DIR="$HOME/.nvm"
