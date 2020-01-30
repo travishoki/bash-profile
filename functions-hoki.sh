@@ -81,6 +81,31 @@ function hokititle() {
 	echo -n -e "\033]0;$1\007"
 }
 
+function hokigame() {
+	echo '-- Hoki Game --'
+
+	#Open Applications
+	TEMPAPPARRAY1=("Google Chrome")
+	_hokiOpenApps TEMPAPPARRAY1[@]
+
+	hokititle "Chatbooks"
+
+	echo '----------------------'
+
+	# Go to Chatbooks
+	cd ~/Sites/game-react-native/
+
+	# Open Tower
+	gittower .
+
+	# Open Atom
+	atom .
+
+	nvm use 10
+
+	yarn start
+}
+
 export NVM_DIR="$HOME/.nvm"
 	[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"# This loads nvm
 	[ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"# This loads nvm bash_completion
