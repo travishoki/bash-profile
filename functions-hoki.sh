@@ -88,12 +88,12 @@ function hokigame() {
 	TEMPAPPARRAY1=("Google Chrome")
 	_hokiOpenApps TEMPAPPARRAY1[@]
 
-	hokititle "Chatbooks"
+	hokititle "Game"
 
 	echo '----------------------'
 
 	# Go to Chatbooks
-	cd ~/Sites/game-react-native/
+	cd ~/Sites/hoki-skateboards-react-native/
 
 	# Open Tower
 	gittower .
