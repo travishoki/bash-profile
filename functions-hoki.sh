@@ -38,9 +38,12 @@ function hokiprofile(){
 
 	echo 'Got to dir'
 	cd ~/hoki-bash-profile
+
 	hokititle "Bash Profile"
+
 	echo 'Open in Atom'
 	atom .
+
 	echo 'Open in Tower'
 	gittower .
 }
@@ -51,11 +54,16 @@ function hokiportfolio(){
 
 	echo 'Got to dir'
 	cd ~//Sites/travishoki-react
+
 	hokititle "Portfolio"
+
 	echo 'Open in Atom'
 	atom .
+
 	echo 'Open in Tower'
 	gittower .
+
+	yarn start
 }
 
 function _hokiOpenApps(){
@@ -103,12 +111,11 @@ function hokigame() {
 
 	hokititle "Game"
 
-	echo '----------------------'
-
 	# Go to Chatbooks
+	echo 'Got to dir'
 	cd ~/Sites/hoki-skateboards-react-native/
 
-	# Open Tower
+	echo 'Open in Tower'
 	gittower .
 
 	# Open Atom
