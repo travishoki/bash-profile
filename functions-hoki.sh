@@ -114,7 +114,7 @@ function hokigame() {
 	# Open Atom
 	atom .
 
-	nvm use 10
+	nvm use
 
 	yarn web
 }
