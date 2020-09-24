@@ -118,6 +118,9 @@ function hokigame() {
 	echo 'Open in Tower'
 	gittower .
 
+	# Open Directory
+	open .
+
 	# Open Atom
 	atom .
 
