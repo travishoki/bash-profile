@@ -32,6 +32,42 @@ function hokipwd(){
 	fi
 }
 
+function _hokiCloseApps(){
+	echo '-- Hoki Close Apps --'
+	param1=("${!1}")
+	for i in "${param1[@]}"; do
+		if pgrep -xq -- "${i}"; then
+			echo 'Close '"$i"
+			osascript -e 'quit app "'$i'"'
+		else
+			echo 'Already Closed '"$i"
+		fi
+	done
+}
+
+#Atom title
+function hokititle() {
+	echo -n -e "\033]0;$1\007"
+}
+
+function _hokiOpenApps(){
+	echo '-- Hoki Open Apps --'
+
+	echo 'Go to Applications'
+	cd /
+	cd Applications
+
+	param1=("${!1}")
+	for i in "${param1[@]}"; do
+		if pgrep -xq -- "${i}"; then
+			echo 'Already Running '"$i"
+		else
+			echo 'Open '"$i"
+			open -a "$i"
+		fi
+	done
+}
+
 #Open Profile
 function hokiprofile(){
 	echo '-- Hoki Profile --'
@@ -63,45 +99,13 @@ function hokiportfolio(){
 	echo 'Open in Tower'
 	gittower .
 
+	echo 'Open in Finder'
+	atom .
+
 	yarn start
 }
 
-function _hokiOpenApps(){
-	echo '-- Hoki Open Apps --'
-
-	echo 'Go to Applications'
-	cd /
-	cd Applications
-
-	param1=("${!1}")
-	for i in "${param1[@]}"; do
-		if pgrep -xq -- "${i}"; then
-			echo 'Already Running '"$i"
-		else
-			echo 'Open '"$i"
-			open -a "$i"
-		fi
-	done
-}
-
-function _hokiCloseApps(){
-	echo '-- Hoki Close Apps --'
-	param1=("${!1}")
-	for i in "${param1[@]}"; do
-		if pgrep -xq -- "${i}"; then
-			echo 'Close '"$i"
-			osascript -e 'quit app "'$i'"'
-		else
-			echo 'Already Closed '"$i"
-		fi
-	done
-}
-
-#Atom title
-function hokititle() {
-	echo -n -e "\033]0;$1\007"
-}
-
+#Open Game
 function hokigame() {
 	echo '-- Hoki Game --'
 
@@ -115,13 +119,13 @@ function hokigame() {
 	echo 'Got to dir'
 	cd ~/Sites/hoki-skateboards-react-native/
 
+	echo 'Open in Atom'
+	atom .
+
 	echo 'Open in Tower'
 	gittower .
 
-	# Open Directory
-	open .
-
-	# Open Atom
+	echo 'Open in Finder'
 	atom .
 
 	nvm use
