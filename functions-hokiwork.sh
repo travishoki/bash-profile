@@ -10,12 +10,12 @@ function hokiwork(){
 	# TEMPAPPARRAY2=()
 	# _hokiCloseApps TEMPAPPARRAY2[@]
 
-	hokititle "Chatbooks"
+	hokititle "XANT"
 
 	echo '----------------------'
 
 	# Go to Chatbooks
-	cd ~/Sites/web-infinite/
+	cd ~/Sites/
 
 	# Open Tower
 	gittower .
@@ -32,8 +32,3 @@ function title {
 alias tDevApi='title "ch-devapi"'
 alias tStart='title "ch-atbooks"'
 alias tStyleGuide='title "ch-style"'
-
-# Commands
-alias chat='tStart && sudo yarn start'
-alias chdevapi='tDevApi && sudo yarn start:dev-api'
-alias chstyle='tStyleGuide && cd chatponents && sudo yarn start'

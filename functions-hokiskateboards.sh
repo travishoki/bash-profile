@@ -10,7 +10,7 @@ function hokiskateboards(){
 	# TEMPAPPARRAY2=()
 	# _hokiCloseApps TEMPAPPARRAY2[@]
 
-	hokititle "Chatbooks"
+	hokititle "Hoki Skateboards"
 
 	echo '----------------------'
 
