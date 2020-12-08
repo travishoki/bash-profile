@@ -16,6 +16,8 @@ git clone https://github.com/travishoki/hoki-bash-profile.git
 
 ---
 # Commands
-
-### Launch Work Programs
-`hoki work`
+`hokigame`
+`hokiportfolio`
+`hokiprofile`
+`hokiskateboards`
+`hokiwork`
