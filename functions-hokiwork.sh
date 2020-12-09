@@ -3,7 +3,13 @@ function hokiwork(){
 	echo '-- Hoki Work --'
 
 	#Open Applications
-	TEMPAPPARRAY1=("Slack" "Spotify" "Google Chrome")
+	TEMPAPPARRAY1=(
+		"Atom"
+		"Microsoft Outlook"
+		"Microsoft Teams"
+		"Spotify"
+		"Google Chrome"
+	)
 	_hokiOpenApps TEMPAPPARRAY1[@]
 
 	#Close Applications
@@ -16,12 +22,6 @@ function hokiwork(){
 
 	# Go to Chatbooks
 	cd ~/Sites/
-
-	# Open Tower
-	gittower .
-
-	# Open Visual Studio Code
-	atom .
 }
 
 function title {
