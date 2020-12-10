@@ -12,10 +12,6 @@ function hokiwork(){
 	)
 	_hokiOpenApps TEMPAPPARRAY1[@]
 
-	#Close Applications
-	# TEMPAPPARRAY2=()
-	# _hokiCloseApps TEMPAPPARRAY2[@]
-
 	hokititle "XANT"
 
 	echo '----------------------'
