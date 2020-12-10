@@ -21,7 +21,7 @@ function hokiwork(){
 	echo '----------------------'
 
 	# Go to Chatbooks
-	cd ~/Sites/
+	cd ~/Sites/xant/
 }
 
 function title {
