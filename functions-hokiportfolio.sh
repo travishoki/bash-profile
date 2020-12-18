@@ -2,10 +2,10 @@
 function hokiportfolio(){
 	echo '-- Hoki Portfolio --'
 
+	hokititle "Portfolio"
+
 	echo 'Got to dir'
 	cd ~//Sites/travishoki-react
-
-	hokititle "Portfolio"
 
 	echo 'Open in Atom'
 	atom .
@@ -14,7 +14,7 @@ function hokiportfolio(){
 	gittower .
 
 	echo 'Open in Finder'
-	atom .
+	open .
 
 	yarn start
 }

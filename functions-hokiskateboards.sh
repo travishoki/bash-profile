@@ -2,24 +2,21 @@
 function hokiskateboards(){
 	echo '-- Hoki Skateboards --'
 
+	hokititle "Hoki Skateboards"
+
 	#Open Applications
 	TEMPAPPARRAY1=("Google Chrome")
 	_hokiOpenApps TEMPAPPARRAY1[@]
 
-	#Close Applications
-	# TEMPAPPARRAY2=()
-	# _hokiCloseApps TEMPAPPARRAY2[@]
-
-	hokititle "Hoki Skateboards"
-
-	echo '----------------------'
-
-	# Go to Chatbooks
+	echo 'Got to dir'
 	cd ~/Sites/wp/themes/hokiskateboards-wp
 
-	# Open Tower
-	gittower .
-
-	# Open Atom
+	echo 'Open in Atom'
 	atom .
+
+	echo 'Open in Finder'
+	open .
+
+	echo 'Open in Tower'
+	gittower .
 }

@@ -2,11 +2,11 @@
 function hokigame() {
 	echo '-- Hoki Game --'
 
+	hokititle "Game"
+
 	#Open Applications
 	TEMPAPPARRAY1=("Google Chrome")
 	_hokiOpenApps TEMPAPPARRAY1[@]
-
-	hokititle "Game"
 
 	# Go to Chatbooks
 	echo 'Got to dir'
@@ -19,7 +19,7 @@ function hokigame() {
 	gittower .
 
 	echo 'Open in Finder'
-	atom .
+	open .
 
 	nvm use
 

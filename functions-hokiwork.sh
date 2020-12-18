@@ -2,6 +2,8 @@
 function hokiwork(){
 	echo '-- Hoki Work --'
 
+	hokititle "XANT"
+
 	#Open Applications
 	TEMPAPPARRAY1=(
 		"Atom"
@@ -12,19 +14,9 @@ function hokiwork(){
 	)
 	_hokiOpenApps TEMPAPPARRAY1[@]
 
-	hokititle "XANT"
-
-	echo '----------------------'
-
-	# Go to Chatbooks
+	echo 'Got to dir'
 	cd ~/Sites/xant/
-}
 
-function title {
-	echo -ne "\033]0;"$*"\007"
+	echo 'Open in Finder'
+	open .
 }
-
-# Titles
-alias tDevApi='title "ch-devapi"'
-alias tStart='title "ch-atbooks"'
-alias tStyleGuide='title "ch-style"'
