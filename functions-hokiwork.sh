@@ -17,6 +17,9 @@ function hokiwork(){
 	echo 'Got to dir'
 	cd ~/Sites/xant/
 
+	echo 'Open in Tower'
+	gittower .
+
 	echo 'Open in Finder'
 	open .
 }
